@@ -4,6 +4,7 @@ import Face from '@/components/Face'
 import AboutMe from '@/components/AboutMe'
 import Box from '@/components/utility/Box'
 import Skills from '@/components/Skills'
+import AboutMeDetails from '@/components/AboutMeDetails'
 
 function getAuthURI() {
     const LI_AUTH_URL = 'https://www.linkedin.com/oauth/v2/authorization'
@@ -19,17 +20,15 @@ function getAuthURI() {
 export default function MyResume({ children }: { children: React.ReactNode }) {
     return (
         <main className="mx-auto w-full container min-w-72">
-            <section className="flex flex-col md:flex-row p-3 md:p-8 lg:p-12 gap-4">
-                <section className="flex flex-row md:flex-col p-3 lg:p-12 md:p-8 gap-8 bg-white shadow-md shadow-slate-100 h-fit">
-                    <Face></Face>
+            <section className="flex flex-col md:flex-row md:flex-auto p-3 md:p-8 lg:p-12 gap-4">
+                <section className="flex flex-col lg:flex-row gap-3">
+                    <section className="flex flex-col min-[540px]:max-md:flex-row gap-4">
+                        <Face></Face>
+                        <AboutMeDetails></AboutMeDetails>
+                    </section>
+                    <Skills></Skills>
                 </section>
-                <Skills></Skills>
-                <section className="p-3 lg:p-12 md:p-8 bg-white overflow-y-auto max-h-64 md:max-h-[640px] shadow-md shadow-slate-100">
-                    <h1 className="text-lg font-semibold sticky -mx-3 top-0 -translate-y-3 p-3 bg-slate-100/90">
-                        About Me
-                    </h1>
-                    <AboutMe></AboutMe>
-                </section>
+                <AboutMe></AboutMe>
             </section>
         </main>
     )

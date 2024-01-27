@@ -8,8 +8,8 @@ const LINK_TO_GMAIL = 'oleg.budylin.pub@gmail.com'
 
 export default function Face() {
     return (
-        <>
-            <div className="aspect-square relative w-24 md:w-36 lg:w-48 shrink-0 overflow-hidden rounded-md shadow-slate-200 shadow-md ring-2 ring-slate-100">
+        <section className="flex flex-auto md:flex-col md:items-center bg-white shadow-md shadow-slate-100 h-fit rounded-md overflow-hidden">
+            <div className="aspect-square relative w-24 min-[540px]:max-md:w-32 md:w-36 lg:w-48 shrink-0 mr-2 overflow-hidden md:rounded-full md:mx-8 md:mt-8 m-0 md:shadow-md shadow-slate-100">
                 <Image
                     alt="Photo of me"
                     src="/me.jpg"
@@ -17,12 +17,12 @@ export default function Face() {
                     height={320}
                 ></Image>
             </div>
-            <div className="flex flex-col justify-evenly md:gap-2">
+            <div className="flex flex-col w-full justify-evenly md:gap-2 p-3 lg:p-12 md:p-8">
                 <span className="font-bold text-xl hover:underline">
                     Oleg Budylin
                 </span>
                 <span className="font-light w-min">@billrozy</span>
-                <div className="flex flex-row gap-2">
+                <div className="flex flex-row flex-wrap gap-2">
                     <a
                         className="text-2xl hover:scale-110"
                         href={LINK_TO_LINKEDIN}
@@ -53,6 +53,6 @@ export default function Face() {
                     </a>
                 </div>
             </div>
-        </>
+        </section>
     )
 }
