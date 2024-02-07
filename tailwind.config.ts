@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-import defaultTheme from 'tailwindcss/defaultTheme'
+import colors from 'tailwindcss/colors'
 
 const config: Config = {
   content: [
@@ -9,16 +9,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'primary': colors.yellow,
+        'darkgray': '#151515',
+        'mediumgray': '#242424',
+        'lightgray': '#D9D9D9',
       },
       fontFamily: {
-        'sans': ['"Proxima Nova"', ...defaultTheme.fontFamily.sans],
+        kanit: ["Kanit", "sans-serif"],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
 export default config
