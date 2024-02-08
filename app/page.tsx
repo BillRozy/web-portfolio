@@ -7,7 +7,7 @@ import SkillsSubPage from '@/components/sections/skills/SkillsSubPage'
 import BackgroundLayer from '@/components/utility/BackgroundLayer'
 import Separator from '@/components/utility/Separator'
 
-export default function Home({ children }: { children: React.ReactNode }) {
+export default function Home() {
     return (
         <main className="relative flex flex-col gap-14 overflow-hidden">
             <BackgroundLayer className="bg-darkgray"></BackgroundLayer>

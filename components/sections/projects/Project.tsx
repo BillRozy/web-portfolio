@@ -1,12 +1,13 @@
 import BodyText from '@/components/utility/BodyText'
 import PrimaryButton from '@/components/utility/buttons/PrimaryButton'
 import HeadingM from '@/components/utility/headings/HeadingM'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import Image from 'next/image'
 import React from 'react'
 
 export type ProjectType = {
     title: string
-    img: string
+    img: StaticImport | string
     skills: string[]
     linkToGithub?: string
 }
