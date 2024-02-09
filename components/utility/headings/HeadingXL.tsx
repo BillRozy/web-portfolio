@@ -1,12 +1,7 @@
-export default function HeadingXL({
-    children,
-    centered = false,
-}: {
-    children: React.ReactNode
-    centered?: boolean
-}) {
-    const alignment = [centered ? 'text-center' : 'text-start']
-    const classes = [
+import { twMerge } from 'tailwind-merge'
+
+export default function HeadingXL({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+    const classes = twMerge(
         'text-[40px]',
         'leading-10',
         'md:text-7xl',
@@ -14,7 +9,7 @@ export default function HeadingXL({
         'font-semibold',
         'tracking-normal',
         'text-white',
-        ...alignment,
-    ].join(' ')
+        className
+    )
     return <h1 className={classes}>{children}</h1>
 }

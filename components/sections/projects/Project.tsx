@@ -14,14 +14,14 @@ export type ProjectType = {
 
 export default function Project({ project }: { project: ProjectType }) {
     return (
-        <div className="flex flex-col gap-2 items-start">
+        <div className="flex flex-col items-start gap-2">
             <div className="relative aspect-[4/3] w-full">
                 <Image src={project.img} alt="project 1 image" fill></Image>
             </div>
             <HeadingM>
                 <span className="uppercase">{project.title}</span>
             </HeadingM>
-            <ul className="flex flex-row flex-wrap gap-x-4 uppercase">
+            <ul className="flex flex-row flex-wrap gap-x-4 uppercase md:mb-2">
                 {project.skills.map((skill) => (
                     <li key={skill}>
                         <BodyText>{skill}</BodyText>

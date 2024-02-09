@@ -12,14 +12,14 @@ export default function BaseInput({
     title,
     placeholder = title,
     errors = [],
-    classNames = [],
+    className = [],
     input,
     showErrorSymbol = true,
 }: {
     title: string
     placeholder?: string
     errors?: string[]
-    classNames?: string[]
+    className?: string[]
     input: ReactElement
     showErrorSymbol?: boolean
 }) {
@@ -46,7 +46,7 @@ export default function BaseInput({
         ...(hasErrors ? errorClasses : neutralClasses),
         ...hoverClasses,
         ...focusClasses,
-        ...classNames,
+        ...className,
     ].join(' ')
     const render_input = React.cloneElement(input, {
         placeholder: placeholder.toUpperCase(),
@@ -56,15 +56,9 @@ export default function BaseInput({
         <div className="flex flex-col gap-1">
             <div className="relative">
                 {render_input}
-                {hasErrors && showErrorSymbol ? (
-                    <ErrorSymbol></ErrorSymbol>
-                ) : null}
+                {hasErrors && showErrorSymbol ? <ErrorSymbol></ErrorSymbol> : null}
             </div>
-            {hasErrors ? (
-                <span className="text-[#FF6F5B] text-xs self-end">
-                    {errors[0]}
-                </span>
-            ) : null}
+            {hasErrors ? <span className="self-end text-xs text-[#FF6F5B]">{errors[0]}</span> : null}
         </div>
     )
 }

@@ -50,10 +50,7 @@ export default function ContactForm() {
             : []),
     ]
     return (
-        <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="w-full flex flex-col gap-4"
-        >
+        <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col gap-4">
             {!emailSent ? (
                 <>
                     <BaseInput
@@ -88,28 +85,18 @@ export default function ContactForm() {
                         title="Message"
                         errors={messageErrors}
                         showErrorSymbol={false}
-                        input={
-                            <textarea
-                                rows={3}
-                                {...register('message', { required: true })}
-                            ></textarea>
-                        }
+                        input={<textarea rows={3} {...register('message', { required: true })}></textarea>}
                     ></BaseInput>
-                    <div className="self-end mt-4 mb-12">
-                        <PrimaryButton
-                            type="submit"
-                            title="Send Message"
-                        ></PrimaryButton>
+                    <div className="mb-12 mt-4 self-end">
+                        <PrimaryButton type="submit" title="Send Message"></PrimaryButton>
                     </div>
                 </>
             ) : (
                 <div className="py-12">
-                    <HeadingL centered>
-                        <span className="underline underline-offset-8 decoration-primary-400">
-                            Thank You!
-                        </span>
+                    <HeadingL>
+                        <span className="underline decoration-primary-400 underline-offset-8">Thank You!</span>
                     </HeadingL>
-                    <HeadingM centered>I will contact you soon!</HeadingM>
+                    <HeadingM>I will contact you soon!</HeadingM>
                 </div>
             )}
         </form>

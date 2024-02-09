@@ -10,7 +10,7 @@ export default function Skill({
     description: string
 }) {
     return (
-        <li className="flex flex-col p-2 items-center md:items-start">
+        <li className="flex flex-col items-center p-2 md:items-start md:gap-y-4">
             <HeadingL>{title}</HeadingL>
             <FormattedArticle>{description}</FormattedArticle>
         </li>
