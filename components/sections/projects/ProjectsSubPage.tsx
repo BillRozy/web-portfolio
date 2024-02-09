@@ -3,6 +3,7 @@ import HeadingXL from '@/components/utility/headings/HeadingXL'
 import React from 'react'
 import Project, { ProjectType } from './Project'
 import { basePath } from '@/next.config'
+import Link from 'next/link'
 
 export default function ProjectsSubPage() {
     const projects: ProjectType[] = [
@@ -20,12 +21,14 @@ export default function ProjectsSubPage() {
         },
     ]
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-y-8 md:gap-y-16">
             <div className="flex flex-row items-center justify-between">
                 <HeadingXL>Projects</HeadingXL>
-                <PrimaryButton title="Contact me"></PrimaryButton>
+                <PrimaryButton>
+                    <Link href="#contactform">Contact Me</Link>
+                </PrimaryButton>
             </div>
-            <div className="mt-8 grid grid-cols-1 gap-12 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
                 {projects.map((project) => (
                     <Project project={project} key={project.title}></Project>
                 ))}

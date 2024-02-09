@@ -40,7 +40,7 @@ export default function SkillsSubPage() {
         },
     ]
     return (
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-2">
+        <ul className="grid grid-cols-1 gap-y-2 md:grid-cols-2 md:gap-y-8 lg:grid-cols-3">
             {skills.map((skill) => (
                 <Skill {...skill} key={skill.title}></Skill>
             ))}
