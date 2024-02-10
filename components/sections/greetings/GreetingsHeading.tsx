@@ -4,9 +4,13 @@ import HeadingXL from '@/components/utility/headings/HeadingXL'
 export default function GreetingsHeading() {
     return (
         <div>
-            <HeadingXL centered>
-                Nice to meet you! I&apos;am&nbsp;
-                <span className="underline underline-offset-8 decoration-primary-400">
+            <HeadingXL className="text-center md:text-start">
+                <span>Nice to </span>
+                <br className="hidden md:inline-block"></br>
+                <span>meet you! </span>
+                <span>I&apos;m </span>
+                <br className="hidden md:inline-block"></br>
+                <span className="underline decoration-primary-400 underline-offset-8 md:underline-offset-[13px]">
                     Oleg Budylin
                 </span>
                 .

@@ -2,15 +2,13 @@ import BodyText from './BodyText'
 
 export default function FormattedArticle({
     children,
-    centered = false,
+    className = '',
 }: {
     children: React.ReactNode
-    centered?: boolean
+    className?: string
 }) {
-    const positionClasses = [centered ? 'text-center' : 'text-start']
-    const classes = [...positionClasses].join(' ')
     return (
-        <p className={classes}>
+        <p className={className}>
             <BodyText>{children}</BodyText>
         </p>
     )

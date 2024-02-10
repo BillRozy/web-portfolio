@@ -1,18 +1,6 @@
-export default function HeadingL({
-    children,
-    centered,
-}: {
-    children: React.ReactNode
-    centered?: boolean
-}) {
-    const alignment = [centered ? 'text-center' : 'text-start']
-    const classes = [
-        'text-[32px]',
-        'md:text-5xl',
-        'font-semibold',
-        'text-white',
-        'tracking-normal',
-        ...alignment,
-    ].join(' ')
-    return <h2 className={classes}>{children}</h2>
+import { twMerge } from 'tailwind-merge'
+
+export default function HeadingL({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+    const classes = twMerge('text-[32px]', 'md:text-5xl', 'font-semibold', 'text-white', 'tracking-normal', className)
+    return <h1 className={classes}>{children}</h1>
 }
