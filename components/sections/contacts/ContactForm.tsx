@@ -50,7 +50,7 @@ export default function ContactForm() {
             : []),
     ]
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="flex w-full flex-col gap-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex w-full max-w-md flex-col gap-4 xl:min-w-96">
             {!emailSent ? (
                 <>
                     <BaseInput
@@ -85,7 +85,13 @@ export default function ContactForm() {
                         title="Message"
                         errors={messageErrors}
                         showErrorSymbol={false}
-                        input={<textarea rows={3} {...register('message', { required: true })}></textarea>}
+                        input={
+                            <textarea
+                                className="resize-none"
+                                rows={3}
+                                {...register('message', { required: true })}
+                            ></textarea>
+                        }
                     ></BaseInput>
                     <div className="mb-12 mt-4 self-end">
                         <PrimaryButton type="submit" title="Send Message"></PrimaryButton>
