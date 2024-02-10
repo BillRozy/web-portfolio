@@ -2,20 +2,50 @@ import PrimaryButton from '@/components/utility/buttons/PrimaryButton'
 import HeadingXL from '@/components/utility/headings/HeadingXL'
 import React from 'react'
 import Project, { ProjectType } from './Project'
-import { basePath } from '@/next.config'
 import Link from 'next/link'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+import Image from 'next/image'
+import { basePath } from '@/next.config'
+const ProjectImage = ({
+    small,
+    huge,
+    alt,
+}: {
+    small: StaticImport | string
+    huge: StaticImport | string
+    alt: string
+}) => {
+    return (
+        <>
+            <Image src={`${basePath}/${small}`} alt={`${alt} small variant`} className="block xl:hidden" fill></Image>
+            <Image src={`${basePath}/${huge}`} alt={`${alt} huge variant`} className="hidden xl:block" fill></Image>
+        </>
+    )
+}
 
 export default function ProjectsSubPage() {
     const projects: ProjectType[] = [
         {
             title: 'Bench Battles',
-            img: `${basePath}/thumbnail-project-1-small.webp`,
+            img: (
+                <ProjectImage
+                    small="/thumbnail-project-1-small.webp"
+                    huge="/thumbnail-project-1-large.webp"
+                    alt="project 1"
+                ></ProjectImage>
+            ),
             skills: ['HTML', 'CSS', 'TypeScript', 'React', 'Redux', 'Electron'],
             linkToGithub: 'https://github.com/BillRozy/bench-battles',
         },
         {
             title: 'MuSync',
-            img: `${basePath}/thumbnail-project-2-small.webp`,
+            img: (
+                <ProjectImage
+                    small="thumbnail-project-2-small.webp"
+                    huge="thumbnail-project-2-large.webp"
+                    alt="project 2"
+                ></ProjectImage>
+            ),
             skills: ['HTML', 'CSS', 'TypeScript', 'Vue', 'Quasar', 'Pinia'],
             linkToGithub: 'https://github.com/BillRozy/musink',
         },

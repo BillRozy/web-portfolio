@@ -20,15 +20,15 @@ export default function SkillsSubPage() {
         },
         {
             title: 'React',
-            description: '5 Years Experience',
+            description: '2 Years Experience',
         },
         {
             title: 'TailwindCSS',
-            description: '5 Years Experience',
+            description: '1 Year Experience',
         },
         {
             title: 'TypeScript',
-            description: '5 Years Experience',
+            description: '3 Years Experience',
         },
         {
             title: 'Python',
@@ -36,7 +36,7 @@ export default function SkillsSubPage() {
         },
         {
             title: 'Node.js',
-            description: '5 Years Experience',
+            description: '3 Years Experience',
         },
     ]
     return (

@@ -5,7 +5,7 @@ export default function HeadingXL({ children, className = '' }: { children: Reac
         'text-[40px]',
         'leading-10',
         'md:text-7xl',
-        'lg:text-[88px]',
+        'xl:text-[88px]',
         'font-semibold',
         'tracking-normal',
         'text-white',
