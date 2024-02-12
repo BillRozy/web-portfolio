@@ -1,22 +1,34 @@
+import BackgroundLayer from '@/components/utility/BackgroundLayer'
 import BodyText from '@/components/utility/BodyText'
 import PrimaryButton from '@/components/utility/buttons/PrimaryButton'
 import HeadingM from '@/components/utility/headings/HeadingM'
-import { StaticImport } from 'next/dist/shared/lib/get-img-props'
-import Image from 'next/image'
-import React from 'react'
+import React, { ReactElement } from 'react'
 
 export type ProjectType = {
     title: string
-    img: StaticImport | string
+    img: ReactElement
     skills: string[]
     linkToGithub?: string
 }
 
+const GitHubLink = ({ linkToGithub }: { linkToGithub?: string }) => {
+    if (linkToGithub == null) return null
+    return (
+        <a href={linkToGithub} target="_blank">
+            Check on Github
+        </a>
+    )
+}
+
 export default function Project({ project }: { project: ProjectType }) {
     return (
-        <div className="flex flex-col items-start gap-2">
+        <div className="group relative flex flex-col items-start gap-2 xl:hover:cursor-pointer">
             <div className="relative aspect-[4/3] w-full">
-                <Image src={project.img} alt="project 1 image" fill></Image>
+                {project.img}
+                <BackgroundLayer className="z-0 hidden bg-gray-900/80 xl:invisible xl:block xl:group-hover:visible"></BackgroundLayer>
+                <PrimaryButton className="left-0 right-0 top-1/2 mx-auto hidden max-w-40 -translate-y-1/2 xl:invisible xl:absolute xl:block xl:group-hover:visible">
+                    <GitHubLink linkToGithub={project.linkToGithub}></GitHubLink>
+                </PrimaryButton>
             </div>
             <HeadingM>
                 <span className="uppercase">{project.title}</span>
@@ -28,10 +40,8 @@ export default function Project({ project }: { project: ProjectType }) {
                     </li>
                 ))}
             </ul>
-            <PrimaryButton>
-                <a href={project.linkToGithub} target="_blank">
-                    Check on Github
-                </a>
+            <PrimaryButton className="xl:hidden">
+                <GitHubLink linkToGithub={project.linkToGithub}></GitHubLink>
             </PrimaryButton>
         </div>
     )
