@@ -4,6 +4,7 @@ import Separator from '@/components/utility/Separator'
 import HeadingXL from '@/components/utility/headings/HeadingXL'
 import React from 'react'
 import ContactForm from './ContactForm'
+import ThemeSwitcher from '../footer/ThemeSwitcher'
 
 export default function ContactsSubPage() {
     return (
