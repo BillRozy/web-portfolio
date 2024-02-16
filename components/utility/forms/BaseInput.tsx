@@ -1,8 +1,9 @@
 import React, { ReactElement, ReactNode } from 'react'
+import { ClassNameValue, twMerge } from 'tailwind-merge'
 
 function ErrorSymbol() {
     return (
-        <span className="flex justify-center items-center absolute rounded-full text-[#FF6F5B] border-[1px] border-[#FF6F5B] size-6 top-1/4 right-0">
+        <span className="absolute right-0 top-1/4 flex size-6 items-center justify-center rounded-full border-[1px] border-[#FF6F5B] text-[#FF6F5B]">
             !
         </span>
     )
@@ -12,19 +13,20 @@ export default function BaseInput({
     title,
     placeholder = title,
     errors = [],
-    className = [],
-    input,
+    className = '',
+    renderInput,
     showErrorSymbol = true,
 }: {
     title: string
     placeholder?: string
     errors?: string[]
-    className?: string[]
-    input: ReactElement
+    className?: string
+    renderInput: (placeholder: string, className: string) => ReactElement
     showErrorSymbol?: boolean
 }) {
     const hasErrors = errors.length > 0
     const commonClasses = [
+        'text-font-main',
         'form-input',
         'bg-transparent',
         'border-x-0',
@@ -37,25 +39,21 @@ export default function BaseInput({
         'placeholder:tracking-tight',
         'w-full',
     ]
-    const neutralClasses = ['border-neutral-500']
-    const hoverClasses = ['hover:border-primary-400']
-    const focusClasses = ['focus:ring-0', 'focus:border-primary-400']
-    const errorClasses = ['border-[#FF6F5B]']
-    const classes = [
-        ...commonClasses,
-        ...(hasErrors ? errorClasses : neutralClasses),
-        ...hoverClasses,
-        ...focusClasses,
-        ...className,
-    ].join(' ')
-    const render_input = React.cloneElement(input, {
-        placeholder: placeholder.toUpperCase(),
-        className: classes,
-    })
+    const neutralClasses = 'border-neutral-400'
+    const hoverClasses = 'hover:border-primary'
+    const focusClasses = 'focus:ring-0 focus:border-primary'
+    const errorClasses = 'border-[#FF6F5B]'
+    const classes = twMerge(
+        commonClasses,
+        hasErrors ? errorClasses : neutralClasses,
+        hoverClasses,
+        focusClasses,
+        className
+    )
     return (
         <div className="flex flex-col gap-1">
             <div className="relative">
-                {render_input}
+                {renderInput(placeholder.toUpperCase(), classes)}
                 {hasErrors && showErrorSymbol ? <ErrorSymbol></ErrorSymbol> : null}
             </div>
             {hasErrors ? <span className="self-end text-xs text-[#FF6F5B]">{errors[0]}</span> : null}

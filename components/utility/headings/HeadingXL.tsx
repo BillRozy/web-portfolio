@@ -8,7 +8,7 @@ export default function HeadingXL({ children, className = '' }: { children: Reac
         'xl:text-[88px]',
         'font-semibold',
         'tracking-normal',
-        'text-white',
+        'text-font-secondary',
         className
     )
     return <h1 className={classes}>{children}</h1>

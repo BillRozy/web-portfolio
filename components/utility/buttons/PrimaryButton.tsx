@@ -12,7 +12,7 @@ export default function PrimaryButton({
     children?: React.ReactNode
 }) {
     const classes = twMerge(
-        'border-b-2 border-solid border-primary-400 py-2 text-base font-medium uppercase tracking-widest text-white hover:text-primary-400',
+        'border-b-2 border-solid border-primary py-2 text-base font-medium uppercase tracking-widest text-font-secondary hover:text-primary',
         className
     )
     return (

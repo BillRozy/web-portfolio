@@ -6,5 +6,7 @@
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "tailwindCSS.classAttributes": ["class", "className", "ngClass", ".*Classes.*"],
+    "tailwindCSS.experimental.classRegex": ["[a-zA-Z]*Class='([^']+)'"]
 }

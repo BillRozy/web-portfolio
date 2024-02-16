@@ -1,14 +1,14 @@
 import React from 'react'
-import circleSvg from '@/public/pattern-circle.svg'
 import { twMerge } from 'tailwind-merge'
-import Image from 'next/image'
 
-export default function Circle({ className = '' }: { className?: string }) {
-    const defaultSizes = 'h-[129px] w-[129px]'
-    const classes = twMerge(defaultSizes, className)
+const SvgCircle = ({ className = '' }: { className?: string }) => {
+    const classes = twMerge('stroke-art-primary', className)
+
     return (
-        <div className={classes}>
-            <Image src={circleSvg} fill alt="circle-art"></Image>
-        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width={129} height={129} className={classes}>
+            <circle cx={830.5} cy={585.5} r={64} fill="none" transform="translate(-766 -521)" />
+        </svg>
     )
 }
+
+export default SvgCircle
