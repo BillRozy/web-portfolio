@@ -56,22 +56,26 @@ export default function ContactForm() {
                     <BaseInput
                         title="Name"
                         errors={nameErrors}
-                        input={
+                        renderInput={(placeholder, className) => (
                             <input
                                 type="text"
+                                placeholder={placeholder}
+                                className={className}
                                 {...register('name', {
                                     required: true,
                                     minLength: 2,
                                     maxLength: 20,
                                 })}
                             ></input>
-                        }
+                        )}
                     ></BaseInput>
                     <BaseInput
                         title="Email"
                         errors={emailErrors}
-                        input={
+                        renderInput={(placeholder, className) => (
                             <input
+                                placeholder={placeholder}
+                                className={className}
                                 type="text"
                                 {...register('email', {
                                     required: true,
@@ -79,19 +83,21 @@ export default function ContactForm() {
                                         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                                 })}
                             ></input>
-                        }
+                        )}
                     ></BaseInput>
                     <BaseInput
                         title="Message"
                         errors={messageErrors}
                         showErrorSymbol={false}
-                        input={
+                        renderInput={(placeholder, className) => (
                             <textarea
-                                className="resize-none"
+                                placeholder={placeholder}
+                                className={`scrollbar-thin resize-none ${className}`}
+                                style={{ msScrollbarArrowColor: 'white' }}
                                 rows={3}
                                 {...register('message', { required: true })}
                             ></textarea>
-                        }
+                        )}
                     ></BaseInput>
                     <div className="mb-12 mt-4 self-end">
                         <PrimaryButton type="submit" title="Send Message"></PrimaryButton>
@@ -100,7 +106,7 @@ export default function ContactForm() {
             ) : (
                 <div className="py-12">
                     <HeadingL>
-                        <span className="underline decoration-primary-400 underline-offset-8">Thank You!</span>
+                        <span className="underline decoration-primary underline-offset-8">Thank You!</span>
                     </HeadingL>
                     <HeadingM>I will contact you soon!</HeadingM>
                 </div>

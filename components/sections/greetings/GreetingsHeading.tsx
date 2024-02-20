@@ -11,7 +11,7 @@ export default function GreetingsHeading() {
                 <br className="hidden xl:inline-block"></br>
                 <span>I&apos;m </span>
                 <br className="hidden md:max-xl:inline-block"></br>
-                <span className="underline decoration-primary-400 underline-offset-8 md:underline-offset-[13px] xl:underline-offset-[15px]">
+                <span className="underline decoration-primary underline-offset-8 md:underline-offset-[14px] xl:underline-offset-[17px]">
                     Oleg Budylin
                 </span>
                 .

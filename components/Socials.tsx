@@ -17,10 +17,10 @@ export default function Socials() {
     return (
         <div className="flex w-full flex-col items-center gap-4 sm:flex-row sm:justify-between">
             <HeadingM>@billrozy</HeadingM>
-            <div className="flex flex-grow-0 flex-row items-center justify-evenly gap-6 text-white">
+            <div className="flex flex-grow-0 flex-row items-center justify-evenly gap-6 text-font-secondary">
                 {buttons.map(([link, icon]) => (
                     <a
-                        className="text-2xl hover:scale-110 hover:text-primary-400"
+                        className="text-2xl hover:scale-110 hover:text-primary md:text-3xl"
                         href={link}
                         target="_blank"
                         key={link}
