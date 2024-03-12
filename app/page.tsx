@@ -16,7 +16,7 @@ export default function Home() {
     const { theme } = useContext(ThemeContext)
     return (
         <main
-            className={`${theme} theme-loading:opacity-0 scrollbar scrollbar-thumb-primary hover:scrollbar-thumb-stone-400 scrollbar-track-stone-900/90 light:scrollbar-track-stone-100 max-h-screen overflow-y-auto overflow-x-hidden opacity-100 transition-opacity duration-1000 `}
+            className={`${theme} max-h-screen overflow-y-auto overflow-x-hidden opacity-100 transition-opacity duration-1000 scrollbar-track-stone-900/90 scrollbar-thumb-primary hover:scrollbar-thumb-stone-400 light:scrollbar-track-stone-100 theme-loading:opacity-0 lg:scrollbar `}
         >
             <section className="relative mx-auto flex flex-col">
                 <BackgroundLayer className="bg-main-bg"></BackgroundLayer>
@@ -43,7 +43,7 @@ export default function Home() {
                     {/* this circle is here for all screens, except > xl, for xl it is in GreetingsSubPage */}
                     <Circle className="absolute -right-[65px] top-[254px] md:top-[472px] xl:hidden"></Circle>
                     <Ovals className="absolute -right-[340px] top-[1652px] md:top-[1340px] lg:top-[1090px] xl:-right-[270px] xl:top-[1200px]"></Ovals>
-                    <Ovals className="absolute -left-[342px] bottom-[378px] md:-left-[370px] md:bottom-[256px] xl:-left-[205px]"></Ovals>
+                    <Ovals className="absolute -left-[342px] bottom-[378px] md:-left-[370px] md:bottom-[290px] xl:-left-[205px]"></Ovals>
                 </div>
             </section>
         </main>

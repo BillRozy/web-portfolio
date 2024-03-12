@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
 import { createThemes } from 'tw-colors'
-import colors from 'tailwindcss/colors'
+import themes from './themes.config'
 
 const config: Config = {
   content: [
@@ -19,37 +19,7 @@ const config: Config = {
   plugins: [
     require('@tailwindcss/forms'),
     require('tailwind-scrollbar')({ preferredStrategy: 'pseudoelements' }),
-    createThemes({
-      light: {
-        "primary": colors.yellow[500],
-        "main-bg": colors.white,
-        "secondary-bg": colors.stone[50],
-        "overflow-bg": colors.stone[100],
-        "font": {
-          "main": colors.stone[700],
-          "secondary": colors.stone[900]
-        },
-        "art": {
-          "primary": colors.stone[200],
-          "secondary": colors.stone[200]
-        }
-      },
-      dark: {
-        "primary": colors.yellow[400],
-        "main-bg": '#151515',
-        "secondary-bg": '#242424',
-        "overflow-bg": colors.stone[900],
-        "font": {
-          "main": '#D9D9D9',
-          "secondary": colors.white
-        },
-        "art": {
-          "primary": colors.white,
-          "secondary": colors.stone[100]
-        }
-      },
-      "theme-loading": {}
-    })
+    createThemes(themes)
   ],
 }
 export default config
