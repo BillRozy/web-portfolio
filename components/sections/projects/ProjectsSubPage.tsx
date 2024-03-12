@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import Image from 'next/image'
 import { basePath } from '@/next.config'
+import Carousel from '@/components/utility/carousel/Carousel'
 const ProjectImage = ({
     small,
     huge,
@@ -17,8 +18,18 @@ const ProjectImage = ({
 }) => {
     return (
         <>
-            <Image src={`${basePath}/${small}`} alt={`${alt} small variant`} className="block xl:hidden" fill></Image>
-            <Image src={`${basePath}/${huge}`} alt={`${alt} huge variant`} className="hidden xl:block" fill></Image>
+            <Image
+                src={`${basePath}/${small}`}
+                alt={`${alt} small variant`}
+                className="block touch-none xl:hidden"
+                fill
+            ></Image>
+            <Image
+                src={`${basePath}/${huge}`}
+                alt={`${alt} huge variant`}
+                className="hidden touch-none xl:block"
+                fill
+            ></Image>
         </>
     )
 }
@@ -49,7 +60,24 @@ export default function ProjectsSubPage() {
             skills: ['HTML', 'CSS', 'TypeScript', 'Vue', 'Quasar', 'Pinia'],
             linkToGithub: 'https://github.com/BillRozy/musink',
         },
+        {
+            title: 'Portfolio',
+            img: (
+                <ProjectImage
+                    small="thumbnail-project-2-small.webp"
+                    huge="thumbnail-project-2-large.webp"
+                    alt="project 2"
+                ></ProjectImage>
+            ),
+            skills: ['HTML', 'CSS', 'TypeScript', 'React', 'TailwindCSS', 'Next.js'],
+            linkToGithub: 'https://github.com/BillRozy/musink',
+        },
     ]
+    const projectRenderFunctions = projects.map((project) => {
+        return { [`Project${project.title}`]: () => <Project project={project} key={project.title}></Project> }[
+            `Project${project.title}`
+        ]
+    })
     return (
         <div className="flex flex-col gap-y-8 md:gap-y-16">
             <div className="flex flex-row items-center justify-between">
@@ -58,7 +86,10 @@ export default function ProjectsSubPage() {
                     <Link href="#contactform">Contact Me</Link>
                 </PrimaryButton>
             </div>
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+            <div className="w-full lg:hidden">
+                <Carousel>{projectRenderFunctions}</Carousel>
+            </div>
+            <div className="hidden grid-cols-1 gap-12 md:grid-cols-2 lg:grid">
                 {projects.map((project) => (
                     <Project project={project} key={project.title}></Project>
                 ))}
