@@ -4,11 +4,9 @@ import GreetingsAboutMe from './GreetingsAboutMe'
 import PrimaryButton from '@/components/utility/buttons/PrimaryButton'
 import Socials from '@/components/Socials'
 import Image from 'next/image'
-import myPhotoMobile from '@/public/me_mobile.png'
-
-import myPhotoTablet from '@/public/me_tablet.png'
-
-import myPhotoDesktop from '@/public/me_desktop.webp'
+import myPhotoMobile from '@/public/ME.PORTRAIT.BW.MOBILE.webp'
+import myPhotoTablet from '@/public/ME.PORTRAIT.BW.TABLET.webp'
+import myPhotoDesktop from '@/public/ME.PORTRAIT.BW.DESKTOP.webp'
 
 import Link from 'next/link'
 import Circle from '@/components/arts/Circle'
