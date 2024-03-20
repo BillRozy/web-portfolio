@@ -19,6 +19,7 @@ export default function GreetingsSubPage() {
                 <div className="relative h-[383px] w-[174px] md:hidden">
                     <BackgroundLayer className="bg-gradient-to-t from-neutral-300/10 to-main-bg/0"></BackgroundLayer>
                     <Image alt="Photo of me" src={myPhotoMobile} fill></Image>
+                    <BackgroundLayer className="z-0 bg-gradient-to-t from-main-bg/100 to-10%"></BackgroundLayer>
                 </div>
                 <div className="relative hidden h-[600px] w-[322px] md:max-xl:block">
                     <BackgroundLayer className="bg-[#242424] light:bg-yellow-100"></BackgroundLayer>
