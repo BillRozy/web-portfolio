@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@use-gesture/react": "^10.3.0",
     "lodash": "^4.17.21",
     "next": "14.0.4",
