@@ -1,0 +1,238 @@
+{
+  "app.aboutMe": [
+    {
+      "type": 0,
+      "value": "Budapesti székhelyű, full-stack fejlesztő vagyok, jártas webalkalmazások létrehozásában és tesztelési könyvtárak autóipari területen."
+    }
+  ],
+  "app.checkOnGithub": [
+    {
+      "type": 0,
+      "value": "Ellenőrizze a Githubon"
+    }
+  ],
+  "app.contactBackNtf": [
+    {
+      "type": 0,
+      "value": "Hamarosan felveszem veled a kapcsolatot!"
+    }
+  ],
+  "app.contactFormDescription": [
+    {
+      "type": 0,
+      "value": "Szeretnék hallani a projektjéről és arról, hogyan segíthetnék. Kérjük, töltse ki az űrlapot, és a lehető leghamarabb visszakeresünk."
+    }
+  ],
+  "app.contactHeading": [
+    {
+      "type": 0,
+      "value": "Kapcsolatok"
+    }
+  ],
+  "app.contactMeLink": [
+    {
+      "type": 0,
+      "value": "Keress meg"
+    }
+  ],
+  "app.emailFormTitle": [
+    {
+      "type": 0,
+      "value": "Email"
+    }
+  ],
+  "app.emptyFieldWarning": [
+    {
+      "type": 0,
+      "value": "Sajnáljuk, a "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " mező nem lehet üres"
+    }
+  ],
+  "app.fieldMaxLengthWarning": [
+    {
+      "type": 0,
+      "value": "Sajnáljuk, a "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " legfeljebb 20 karaktert tartalmazhat"
+    }
+  ],
+  "app.fieldShouldContainWarning": [
+    {
+      "type": 0,
+      "value": "Sajnáljuk, a "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " mezőnek legalább 2 karaktert kell tartalmaznia"
+    }
+  ],
+  "app.greetingFocusMessage": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Örvendek! "
+        }
+      ],
+      "type": 8,
+      "value": "span1"
+    },
+    {
+      "children": [
+      ],
+      "type": 8,
+      "value": "br5"
+    },
+    {
+      "children": [
+        {
+          "type": 1,
+          "value": "name"
+        }
+      ],
+      "type": 8,
+      "value": "span4"
+    },
+    {
+      "children": [
+      ],
+      "type": 8,
+      "value": "br5"
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": " vagyok"
+        }
+      ],
+      "type": 8,
+      "value": "span3"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "app.invalidFieldWarning": [
+    {
+      "type": 0,
+      "value": "Sajnáljuk, a "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " érvénytelen"
+    }
+  ],
+  "app.messageFormTitle": [
+    {
+      "type": 0,
+      "value": "Üzenet"
+    }
+  ],
+  "app.myName": [
+    {
+      "type": 0,
+      "value": "Oleg Budylin"
+    }
+  ],
+  "app.nameFormTitle": [
+    {
+      "type": 0,
+      "value": "Név"
+    }
+  ],
+  "app.projectSectionTitle": [
+    {
+      "type": 0,
+      "value": "Projektek"
+    }
+  ],
+  "app.requiredFieldWarning": [
+    {
+      "type": 0,
+      "value": "Sajnáljuk, a(z) "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " megadása kötelező"
+    }
+  ],
+  "app.sendMessageTitle": [
+    {
+      "type": 0,
+      "value": "Üzenet küldése"
+    }
+  ],
+  "app.thanks": [
+    {
+      "type": 0,
+      "value": "Köszönöm!"
+    }
+  ],
+  "app.yearsExperienceMessage": [
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "offset": 0,
+      "options": {
+        "one": {
+          "value": [
+            {
+              "type": 7
+            },
+            {
+              "type": 0,
+              "value": " Év "
+            }
+          ]
+        },
+        "other": {
+          "value": [
+            {
+              "type": 7
+            },
+            {
+              "type": 0,
+              "value": " Év "
+            }
+          ]
+        }
+      },
+      "pluralType": "cardinal",
+      "type": 6,
+      "value": "num"
+    },
+    {
+      "type": 0,
+      "value": " Tapasztalat"
+    }
+  ]
+}

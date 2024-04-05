@@ -1,42 +1,76 @@
 import Skill from './Skill'
+import { useIntl } from 'react-intl'
 
 export default function SkillsSubPage() {
+    const intl = useIntl()
+    const years5ExperienceMessage = intl.formatMessage(
+        {
+            id: 'app.yearsExperienceMessage',
+        },
+        {
+            num: 5,
+        }
+    )
+    const years3ExperienceMessage = intl.formatMessage(
+        {
+            id: 'app.yearsExperienceMessage',
+        },
+        {
+            num: 3,
+        }
+    )
+    const years2ExperienceMessage = intl.formatMessage(
+        {
+            id: 'app.yearsExperienceMessage',
+        },
+        {
+            num: 2,
+        }
+    )
+    const years1ExperienceMessage = intl.formatMessage(
+        {
+            id: 'app.yearsExperienceMessage',
+        },
+        {
+            num: 1,
+        }
+    )
     const skills = [
         {
             title: 'HTML',
-            description: '5 Years Experience',
+            description: years5ExperienceMessage,
         },
         {
             title: 'CSS',
-            description: '5 Years Experience',
+            description: years5ExperienceMessage,
         },
         {
             title: 'JavaScript',
-            description: '5 Years Experience',
+            description: years3ExperienceMessage,
         },
         {
             title: 'Vue',
-            description: '5 Years Experience',
+            description: years5ExperienceMessage,
         },
         {
             title: 'React',
-            description: '2 Years Experience',
+            description: years2ExperienceMessage,
         },
         {
             title: 'TailwindCSS',
-            description: '1 Year Experience',
+            description: years1ExperienceMessage,
         },
         {
             title: 'TypeScript',
-            description: '3 Years Experience',
+            description: years3ExperienceMessage,
         },
         {
             title: 'Python',
-            description: '5 Years Experience',
+            description: years5ExperienceMessage,
         },
         {
             title: 'Node.js',
-            description: '3 Years Experience',
+            description: years3ExperienceMessage,
         },
     ]
     return (

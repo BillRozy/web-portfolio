@@ -7,6 +7,7 @@ import { useForm, SubmitHandler } from 'react-hook-form'
 import HeadingM from '@/components/utility/headings/HeadingM'
 import HeadingL from '@/components/utility/headings/HeadingL'
 import emailjs from '@emailjs/browser'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 type Inputs = {
     name: string
@@ -19,6 +20,61 @@ const SERVICE_ID = 'service_x84lgjk'
 const TEMPLATE_ID = 'template_5xgib3v'
 
 export default function ContactForm() {
+    const intl = useIntl()
+    const nameTitle = intl.formatMessage({
+        id: 'app.nameFormTitle',
+        defaultMessage: 'Name',
+    })
+    const emailTitle = intl.formatMessage({
+        id: 'app.emailFormTitle',
+        defaultMessage: 'E-Mail',
+    })
+    const messageTitle = intl.formatMessage({
+        id: 'app.messageFormTitle',
+        defaultMessage: 'Message',
+    })
+    const nameIsRequiredWarning = intl.formatMessage(
+        {
+            id: 'app.requiredFieldWarning',
+            defaultMessage: 'Sorry, field is required',
+        },
+        { field: nameTitle }
+    )
+    const nameShouldContainWarning = intl.formatMessage(
+        {
+            id: 'app.fieldShouldContainWarning',
+            defaultMessage: 'Sorry, field should contain at least 2 characters',
+        },
+        { field: nameTitle, charactersCount: 2 }
+    )
+    const nameMaxLengthWarning = intl.formatMessage(
+        {
+            id: 'app.fieldMaxLengthWarning',
+            defaultMessage: 'Sorry, field should contain max 20 characters',
+        },
+        { field: nameTitle, charactersCount: 20 }
+    )
+    const emailIsRequiredWarning = intl.formatMessage(
+        {
+            id: 'app.requiredFieldWarning',
+            defaultMessage: 'Sorry, field is required',
+        },
+        { field: emailTitle }
+    )
+    const emailIsInvalidWarning = intl.formatMessage(
+        {
+            id: 'app.invalidFieldWarning',
+            defaultMessage: 'Sorry, field is invalid',
+        },
+        { field: emailTitle }
+    )
+    const messageIsEmptyWarning = intl.formatMessage(
+        {
+            id: 'app.emptyFieldWarning',
+            defaultMessage: 'Sorry, field should not be empty',
+        },
+        { field: messageTitle }
+    )
     const {
         register,
         handleSubmit,
@@ -40,15 +96,15 @@ export default function ContactForm() {
         }
     }
     const nameErrors = [
-        ...(errors.name?.type === 'required' ? ['Sorry, name is required'] : []),
-        ...(errors.name?.type === 'minLength' ? ['Sorry, name should be has at least 2 characters'] : []),
-        ...(errors.name?.type === 'maxLength' ? ['Sorry, name should be max 20 characters'] : []),
+        ...(errors.name?.type === 'required' ? [nameIsRequiredWarning] : []),
+        ...(errors.name?.type === 'minLength' ? [nameShouldContainWarning] : []),
+        ...(errors.name?.type === 'maxLength' ? [nameMaxLengthWarning] : []),
     ]
     const emailErrors = [
-        ...(errors.email?.type === 'required' ? ['Sorry, email is required'] : []),
-        ...(errors.email?.type === 'pattern' ? ['Sorry, this email is invalid'] : []),
+        ...(errors.email?.type === 'required' ? [emailIsRequiredWarning] : []),
+        ...(errors.email?.type === 'pattern' ? [emailIsInvalidWarning] : []),
     ]
-    const messageErrors = [...(errors.message?.type === 'required' ? ['Sorry, message should not be empty'] : [])]
+    const messageErrors = [...(errors.message?.type === 'required' ? [messageIsEmptyWarning] : [])]
     useEffect(() => {
         emailjs.init({
             publicKey: PUBLIC_KEY,
@@ -59,7 +115,7 @@ export default function ContactForm() {
             {!emailSent ? (
                 <>
                     <BaseInput
-                        title="Name"
+                        title={nameTitle}
                         errors={nameErrors}
                         renderInput={(placeholder, className) => (
                             <input
@@ -75,7 +131,7 @@ export default function ContactForm() {
                         )}
                     ></BaseInput>
                     <BaseInput
-                        title="Email"
+                        title={emailTitle}
                         errors={emailErrors}
                         renderInput={(placeholder, className) => (
                             <input
@@ -91,7 +147,7 @@ export default function ContactForm() {
                         )}
                     ></BaseInput>
                     <BaseInput
-                        title="Message"
+                        title={messageTitle}
                         errors={messageErrors}
                         showErrorSymbol={false}
                         renderInput={(placeholder, className) => (
@@ -105,15 +161,29 @@ export default function ContactForm() {
                         )}
                     ></BaseInput>
                     <div className="mb-12 mt-4 self-end">
-                        <PrimaryButton type="submit" title="Send Message"></PrimaryButton>
+                        <PrimaryButton type="submit">
+                            <FormattedMessage
+                                id="app.sendMessageTitle"
+                                description="Send Message"
+                                defaultMessage="Send Message"
+                            />
+                        </PrimaryButton>
                     </div>
                 </>
             ) : (
                 <div className="mx-auto py-12">
                     <HeadingL className="mb-2 text-center">
-                        <span className="underline decoration-primary underline-offset-8">Thank You!</span>
+                        <span className="underline decoration-primary underline-offset-8">
+                            <FormattedMessage id="app.thanks" description="Say thanks" defaultMessage="Thank You!" />
+                        </span>
                     </HeadingL>
-                    <HeadingM>I will contact you soon!</HeadingM>
+                    <HeadingM>
+                        <FormattedMessage
+                            id="app.contactBackNtf"
+                            description="Say that you will contact back"
+                            defaultMessage="I will contact you soon!"
+                        />
+                    </HeadingM>
                 </div>
             )}
         </form>

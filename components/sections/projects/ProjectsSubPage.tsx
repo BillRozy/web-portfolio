@@ -7,6 +7,7 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import Image from 'next/image'
 import { basePath } from '@/next.config'
 import Carousel from '@/components/utility/carousel/Carousel'
+import { FormattedMessage } from 'react-intl'
 const ProjectImage = ({
     small,
     huge,
@@ -69,7 +70,7 @@ export default function ProjectsSubPage() {
                     alt="project 2"
                 ></ProjectImage>
             ),
-            skills: ['HTML', 'CSS', 'TypeScript', 'React', 'TailwindCSS', 'Next.js'],
+            skills: ['HTML', 'CSS', 'TypeScript', 'React', 'TailwindCSS', 'Next.js', 'React-Intl'],
             linkToGithub: 'https://github.com/BillRozy/musink',
         },
     ]
@@ -81,9 +82,21 @@ export default function ProjectsSubPage() {
     return (
         <div className="flex flex-col gap-y-8 md:gap-y-16">
             <div className="flex flex-row items-center justify-between">
-                <HeadingXL>Projects</HeadingXL>
+                <HeadingXL>
+                    <FormattedMessage
+                        id="app.projectSectionTitle"
+                        description="Title for projects section"
+                        defaultMessage="Projects"
+                    />
+                </HeadingXL>
                 <PrimaryButton>
-                    <Link href="#contactform">Contact Me</Link>
+                    <Link href="#contactform">
+                        <FormattedMessage
+                            id="app.contactMeLink"
+                            description="Contact me link text"
+                            defaultMessage="Contact Me"
+                        />
+                    </Link>
                 </PrimaryButton>
             </div>
             <div className="w-full lg:hidden">
