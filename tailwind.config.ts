@@ -12,7 +12,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        kanit: ["Kanit", "sans-serif"],
+        kanit: ["Fira Sans", "sans-serif"],
       },
     },
   },

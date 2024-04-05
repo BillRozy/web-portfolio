@@ -1,0 +1,73 @@
+{
+  "app.aboutMe": {
+    "defaultMessage": "Based in Hungary, Budapest, I am a full-stack developer experienced in creating web applications and testing libraries in Automotive area.",
+    "description": "Say words about me"
+  },
+  "app.checkOnGithub": {
+    "defaultMessage": "Check on Github",
+    "description": "say to check on github"
+  },
+  "app.contactBackNtf": {
+    "defaultMessage": "I will contact you soon!",
+    "description": "Say that you will contact back"
+  },
+  "app.contactFormDescription": {
+    "defaultMessage": "I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.",
+    "description": "Say words about contacting me"
+  },
+  "app.contactHeading": {
+    "defaultMessage": "Contact",
+    "description": "Contact section heading"
+  },
+  "app.contactMeLink": {
+    "defaultMessage": "Contact Me",
+    "description": "Contact me link text"
+  },
+  "app.emailFormTitle": {
+    "defaultMessage": "E-Mail"
+  },
+  "app.emptyFieldWarning": {
+    "defaultMessage": "Sorry, {field} should not be empty"
+  },
+  "app.fieldMaxLengthWarning": {
+    "defaultMessage": "Sorry, {field} should contain max 20 characters"
+  },
+  "app.fieldShouldContainWarning": {
+    "defaultMessage": "Sorry, {field} should contain at least 2 characters"
+  },
+  "app.greetingFocusMessage": {
+    "defaultMessage": "<span1>Nice to </span1><br1></br1><span2>meet you! </span2><br2></br2><span3>I'm </span3><br3></br3><span4>{name}</span4>."
+  },
+  "app.invalidFieldWarning": {
+    "defaultMessage": "Sorry, {field} is invalid"
+  },
+  "app.messageFormTitle": {
+    "defaultMessage": "Message"
+  },
+  "app.myName": {
+    "defaultMessage": "Oleg Budylin",
+    "description": ""
+  },
+  "app.nameFormTitle": {
+    "defaultMessage": "Name"
+  },
+  "app.projectSectionTitle": {
+    "defaultMessage": "Projects",
+    "description": "Title for projects section"
+  },
+  "app.requiredFieldWarning": {
+    "defaultMessage": "Sorry, {field} is required"
+  },
+  "app.sendMessageTitle": {
+    "defaultMessage": "Send Message",
+    "description": "Send Message"
+  },
+  "app.yearsExperienceMessage": {
+    "defaultMessage": " {num, plural, one {# Year } other {# Years}} Experience",
+    "description": ""
+  },
+  "app.thanks": {
+    "defaultMessage": "Thank You!",
+    "description": "Say thanks"
+  }
+}

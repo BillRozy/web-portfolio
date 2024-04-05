@@ -1,7 +1,7 @@
 'use client'
 
 import { Theme } from '@/themes.config'
-import { ThemeContext } from '@/components/ThemeProvider'
+import { ThemeContext } from '@/components/providers/ThemeProvider'
 import React, { useContext } from 'react'
 import { FaMoon, FaSun } from 'react-icons/fa'
 import { twMerge } from 'tailwind-merge'

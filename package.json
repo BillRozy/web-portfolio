@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "extract": "formatjs extract",
+    "compile": "formatjs compile-folder --ast ./lang ./compiled-lang "
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
@@ -17,12 +19,14 @@
     "react-dom": "^18",
     "react-hook-form": "^7.50.0",
     "react-icons": "^5.0.1",
+    "react-intl": "^6.6.4",
     "react-responsive": "^9.0.2",
     "react-spring": "^9.7.3",
     "server-only": "^0.0.1",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
+    "@formatjs/cli": "^6.2.9",
     "@tailwindcss/forms": "^0.5.7",
     "@types/lodash": "^4.14.202",
     "@types/node": "^20",

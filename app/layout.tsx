@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import ThemeProvider from '@/components/ThemeProvider'
-import ScreenSizeProvider from '@/components/ScreenSizeProvider'
+import ThemeProvider from '@/components/providers/ThemeProvider'
+import ScreenSizeProvider from '@/components/providers/ScreenSizeProvider'
 
 export const metadata: Metadata = {
     title: 'Portfolio: Oleg Budylin',

@@ -1,0 +1,277 @@
+{
+  "app.aboutMe": [
+    {
+      "type": 0,
+      "value": "Я живу в Венгрии, Будапешт, и являюсь Full-Stack разработчиком с опытом создания веб-приложений и библиотек тестирования в автомобильной сфере."
+    }
+  ],
+  "app.checkOnGithub": [
+    {
+      "type": 0,
+      "value": "Посмотреть на Github"
+    }
+  ],
+  "app.contactBackNtf": [
+    {
+      "type": 0,
+      "value": "Я скоро свяжусь с вами!"
+    }
+  ],
+  "app.contactFormDescription": [
+    {
+      "type": 0,
+      "value": "Я очень хотел бы услышать о вашем проекте и о том, как я могу вам помочь. Пожалуйста, заполните форму, и я свяжусь с вами как можно скорее."
+    }
+  ],
+  "app.contactHeading": [
+    {
+      "type": 0,
+      "value": "Контакты"
+    }
+  ],
+  "app.contactMeLink": [
+    {
+      "type": 0,
+      "value": "Связаться"
+    }
+  ],
+  "app.emailFormTitle": [
+    {
+      "type": 0,
+      "value": "E-Mail"
+    }
+  ],
+  "app.emptyFieldWarning": [
+    {
+      "type": 0,
+      "value": "Поле "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " не должно быть пустым"
+    }
+  ],
+  "app.fieldMaxLengthWarning": [
+    {
+      "type": 0,
+      "value": "Поле "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " не должно быть длиннее чем "
+    },
+    {
+      "type": 1,
+      "value": "charactersCount"
+    },
+    {
+      "type": 0,
+      "value": " символов"
+    }
+  ],
+  "app.fieldShouldContainWarning": [
+    {
+      "type": 0,
+      "value": "Поле "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " не должно содержать не менее "
+    },
+    {
+      "type": 1,
+      "value": "charactersCount"
+    },
+    {
+      "type": 0,
+      "value": " символов"
+    }
+  ],
+  "app.greetingFocusMessage": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Рад встрече! "
+        }
+      ],
+      "type": 8,
+      "value": "span1"
+    },
+    {
+      "children": [
+      ],
+      "type": 8,
+      "value": "br1"
+    },
+    {
+      "children": [
+      ],
+      "type": 8,
+      "value": "br2"
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Меня зовут "
+        }
+      ],
+      "type": 8,
+      "value": "span3"
+    },
+    {
+      "children": [
+      ],
+      "type": 8,
+      "value": "br3"
+    },
+    {
+      "children": [
+      ],
+      "type": 8,
+      "value": "br4"
+    },
+    {
+      "children": [
+        {
+          "type": 1,
+          "value": "name"
+        }
+      ],
+      "type": 8,
+      "value": "span4"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "app.invalidFieldWarning": [
+    {
+      "type": 0,
+      "value": "Значение поля "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " невалидно"
+    }
+  ],
+  "app.messageFormTitle": [
+    {
+      "type": 0,
+      "value": "Сообщение"
+    }
+  ],
+  "app.myName": [
+    {
+      "type": 0,
+      "value": "Олег Будылин"
+    }
+  ],
+  "app.nameFormTitle": [
+    {
+      "type": 0,
+      "value": "Имя"
+    }
+  ],
+  "app.projectSectionTitle": [
+    {
+      "type": 0,
+      "value": "Проекты"
+    }
+  ],
+  "app.requiredFieldWarning": [
+    {
+      "type": 0,
+      "value": "Поле "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " обязательно"
+    }
+  ],
+  "app.sendMessageTitle": [
+    {
+      "type": 0,
+      "value": "Отправить сообщение"
+    }
+  ],
+  "app.thanks": [
+    {
+      "type": 0,
+      "value": "Спасибо!"
+    }
+  ],
+  "app.yearsExperienceMessage": [
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "offset": 0,
+      "options": {
+        "few": {
+          "value": [
+            {
+              "type": 7
+            },
+            {
+              "type": 0,
+              "value": " Года"
+            }
+          ]
+        },
+        "one": {
+          "value": [
+            {
+              "type": 7
+            },
+            {
+              "type": 0,
+              "value": " Год "
+            }
+          ]
+        },
+        "other": {
+          "value": [
+            {
+              "type": 7
+            },
+            {
+              "type": 0,
+              "value": " Лет"
+            }
+          ]
+        }
+      },
+      "pluralType": "cardinal",
+      "type": 6,
+      "value": "num"
+    },
+    {
+      "type": 0,
+      "value": " Опыта"
+    }
+  ]
+}

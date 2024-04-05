@@ -1,0 +1,254 @@
+{
+  "app.aboutMe": [
+    {
+      "type": 0,
+      "value": "Based in Hungary, Budapest, I am a full-stack developer experienced in creating web applications and testing libraries in Automotive area."
+    }
+  ],
+  "app.checkOnGithub": [
+    {
+      "type": 0,
+      "value": "Check on Github"
+    }
+  ],
+  "app.contactBackNtf": [
+    {
+      "type": 0,
+      "value": "I will contact you soon!"
+    }
+  ],
+  "app.contactFormDescription": [
+    {
+      "type": 0,
+      "value": "I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible."
+    }
+  ],
+  "app.contactHeading": [
+    {
+      "type": 0,
+      "value": "Contact"
+    }
+  ],
+  "app.contactMeLink": [
+    {
+      "type": 0,
+      "value": "Contact Me"
+    }
+  ],
+  "app.emailFormTitle": [
+    {
+      "type": 0,
+      "value": "E-Mail"
+    }
+  ],
+  "app.emptyFieldWarning": [
+    {
+      "type": 0,
+      "value": "Sorry, "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " should not be empty"
+    }
+  ],
+  "app.fieldMaxLengthWarning": [
+    {
+      "type": 0,
+      "value": "Sorry, "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " should contain max 20 characters"
+    }
+  ],
+  "app.fieldShouldContainWarning": [
+    {
+      "type": 0,
+      "value": "Sorry, "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " should contain at least 2 characters"
+    }
+  ],
+  "app.greetingFocusMessage": [
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "Nice to "
+        }
+      ],
+      "type": 8,
+      "value": "span1"
+    },
+    {
+      "children": [
+      ],
+      "type": 8,
+      "value": "br1"
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "meet you! "
+        }
+      ],
+      "type": 8,
+      "value": "span2"
+    },
+    {
+      "children": [
+      ],
+      "type": 8,
+      "value": "br2"
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "I'm "
+        }
+      ],
+      "type": 8,
+      "value": "span3"
+    },
+    {
+      "children": [
+      ],
+      "type": 8,
+      "value": "br3"
+    },
+    {
+      "children": [
+        {
+          "type": 1,
+          "value": "name"
+        }
+      ],
+      "type": 8,
+      "value": "span4"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "app.invalidFieldWarning": [
+    {
+      "type": 0,
+      "value": "Sorry, "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " is invalid"
+    }
+  ],
+  "app.messageFormTitle": [
+    {
+      "type": 0,
+      "value": "Message"
+    }
+  ],
+  "app.myName": [
+    {
+      "type": 0,
+      "value": "Oleg Budylin"
+    }
+  ],
+  "app.nameFormTitle": [
+    {
+      "type": 0,
+      "value": "Name"
+    }
+  ],
+  "app.projectSectionTitle": [
+    {
+      "type": 0,
+      "value": "Projects"
+    }
+  ],
+  "app.requiredFieldWarning": [
+    {
+      "type": 0,
+      "value": "Sorry, "
+    },
+    {
+      "type": 1,
+      "value": "field"
+    },
+    {
+      "type": 0,
+      "value": " is required"
+    }
+  ],
+  "app.sendMessageTitle": [
+    {
+      "type": 0,
+      "value": "Send Message"
+    }
+  ],
+  "app.thanks": [
+    {
+      "type": 0,
+      "value": "Thank You!"
+    }
+  ],
+  "app.yearsExperienceMessage": [
+    {
+      "type": 0,
+      "value": " "
+    },
+    {
+      "offset": 0,
+      "options": {
+        "one": {
+          "value": [
+            {
+              "type": 7
+            },
+            {
+              "type": 0,
+              "value": " Year "
+            }
+          ]
+        },
+        "other": {
+          "value": [
+            {
+              "type": 7
+            },
+            {
+              "type": 0,
+              "value": " Years"
+            }
+          ]
+        }
+      },
+      "pluralType": "cardinal",
+      "type": 6,
+      "value": "num"
+    },
+    {
+      "type": 0,
+      "value": " Experience"
+    }
+  ]
+}
