@@ -1,0 +1,73 @@
+{
+  "app.aboutMe": {
+    "defaultMessage": "Budapesti székhelyű, full-stack fejlesztő vagyok, jártas webalkalmazások létrehozásában és tesztelési könyvtárak autóipari területen.",
+    "description": "Say words about me"
+  },
+  "app.checkOnGithub": {
+    "defaultMessage": "Ellenőrizze a Githubon",
+    "description": "say to check on github"
+  },
+  "app.contactBackNtf": {
+    "defaultMessage": "Hamarosan felveszem veled a kapcsolatot!",
+    "description": "Say that you will contact back"
+  },
+  "app.contactFormDescription": {
+    "defaultMessage": "Szeretnék hallani a projektjéről és arról, hogyan segíthetnék. Kérjük, töltse ki az űrlapot, és a lehető leghamarabb visszakeresünk.",
+    "description": "Say words about contacting me"
+  },
+  "app.contactHeading": {
+    "defaultMessage": "Kapcsolatok",
+    "description": "Contact section heading"
+  },
+  "app.contactMeLink": {
+    "defaultMessage": "Keress meg",
+    "description": "Contact me link text"
+  },
+  "app.emailFormTitle": {
+    "defaultMessage": "Email"
+  },
+  "app.emptyFieldWarning": {
+    "defaultMessage": "Sajnáljuk, a {field} mező nem lehet üres"
+  },
+  "app.fieldMaxLengthWarning": {
+    "defaultMessage": "Sajnáljuk, a {field} legfeljebb 20 karaktert tartalmazhat"
+  },
+  "app.fieldShouldContainWarning": {
+    "defaultMessage": "Sajnáljuk, a {field} mezőnek legalább 2 karaktert kell tartalmaznia"
+  },
+  "app.greetingFocusMessage": {
+    "defaultMessage": "<span1>Örvendek! </span1><br5></br5><span4>{name}</span4><br5></br5><span3> vagyok</span3>."
+  },
+  "app.invalidFieldWarning": {
+    "defaultMessage": "Sajnáljuk, a {field} érvénytelen"
+  },
+  "app.messageFormTitle": {
+    "defaultMessage": "Üzenet"
+  },
+  "app.myName": {
+    "defaultMessage": "Oleg Budylin",
+    "description": ""
+  },
+  "app.nameFormTitle": {
+    "defaultMessage": "Név"
+  },
+  "app.projectSectionTitle": {
+    "defaultMessage": "Projektek",
+    "description": "Title for projects section"
+  },
+  "app.requiredFieldWarning": {
+    "defaultMessage": "Sajnáljuk, a(z) {field} megadása kötelező"
+  },
+  "app.sendMessageTitle": {
+    "defaultMessage": "Üzenet küldése",
+    "description": "Send Message"
+  },
+  "app.yearsExperienceMessage": {
+    "defaultMessage": " {num, plural, one {# Év } other {# Év }} Tapasztalat",
+    "description": ""
+  },
+  "app.thanks": {
+    "defaultMessage": "Köszönöm!",
+    "description": "Say thanks"
+  }
+}

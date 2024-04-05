@@ -11,6 +11,7 @@ import myPhotoDesktop from '@/public/ME.PORTRAIT.BW.DESKTOP.webp'
 import Link from 'next/link'
 import Circle from '@/components/arts/Circle'
 import BackgroundLayer from '@/components/utility/BackgroundLayer'
+import { FormattedMessage } from 'react-intl'
 
 export default function GreetingsSubPage() {
     return (
@@ -38,7 +39,11 @@ export default function GreetingsSubPage() {
                 <GreetingsAboutMe></GreetingsAboutMe>
                 <PrimaryButton>
                     <Link href="#contactform" scroll={true}>
-                        Contact Me
+                        <FormattedMessage
+                            id="app.contactMeLink"
+                            description="Contact me link text"
+                            defaultMessage="Contact Me"
+                        />
                     </Link>
                 </PrimaryButton>
             </div>

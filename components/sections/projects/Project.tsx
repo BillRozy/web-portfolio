@@ -3,6 +3,7 @@ import BodyText from '@/components/utility/BodyText'
 import PrimaryButton from '@/components/utility/buttons/PrimaryButton'
 import HeadingM from '@/components/utility/headings/HeadingM'
 import React, { ReactElement } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 export type ProjectType = {
     title: string
@@ -15,7 +16,11 @@ const GitHubLink = ({ linkToGithub }: { linkToGithub?: string }) => {
     if (linkToGithub == null) return null
     return (
         <a href={linkToGithub} target="_blank">
-            Check on Github
+            <FormattedMessage
+                id="app.checkOnGithub"
+                description="say to check on github"
+                defaultMessage="Check on Github"
+            />
         </a>
     )
 }

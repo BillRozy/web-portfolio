@@ -1,7 +1,7 @@
 'use client'
 
-import { ThemeContext } from '@/components/ThemeProvider'
-import { ScreenSizeContext } from '@/components/ScreenSizeProvider'
+import { ThemeContext } from '@/components/providers/ThemeProvider'
+import { ScreenSizeContext } from '@/components/providers/ScreenSizeProvider'
 import React, { useRef, useEffect, useCallback, useContext } from 'react'
 import { useSprings, animated } from '@react-spring/web'
 import { useResize, ResizeHandler } from '@/hooks/useResize'
