@@ -9,69 +9,68 @@ import { basePath } from '@/next.config'
 import Carousel from '@/components/utility/carousel/Carousel'
 import { FormattedMessage } from 'react-intl'
 const ProjectImage = ({
-    small,
-    huge,
-    alt,
+    desktop,
+    tablet,
+    mobile,
 }: {
-    small: StaticImport | string
-    huge: StaticImport | string
-    alt: string
+    desktop: StaticImport | string
+    tablet: StaticImport | string
+    mobile: StaticImport | string
 }) => {
     return (
-        <>
-            <Image
-                src={`${basePath}/${small}`}
-                alt={`${alt} small variant`}
-                className="block touch-none xl:hidden"
-                fill
-            ></Image>
-            <Image
-                src={`${basePath}/${huge}`}
-                alt={`${alt} huge variant`}
-                className="hidden touch-none xl:block"
-                fill
-            ></Image>
-        </>
+        <div className="relative h-full w-full overflow-hidden">
+            <img src={`${basePath}/${desktop}`} alt="" className="absolute left-0 top-0 w-full" />
+            <img
+                src={`${basePath}/${tablet}`}
+                alt=""
+                className="absolute left-1/2 top-1/4 w-2/5 rounded-sm shadow-lg ring-4 ring-black"
+            />
+            <img
+                src={`${basePath}/${mobile}`}
+                alt=""
+                className="absolute left-1/2 top-1/2 w-1/6 -translate-x-1/2 rounded-md ring-4 ring-black"
+            />
+        </div>
     )
 }
 
 export default function ProjectsSubPage() {
     const projects: ProjectType[] = [
         {
-            title: 'Bench Battles',
+            title: 'Loopsides - Responsive Web Page',
             img: (
                 <ProjectImage
-                    small="/thumbnail-project-1-small.webp"
-                    huge="/thumbnail-project-1-large.webp"
-                    alt="project 1"
+                    desktop="/loopsides-desktop.webp"
+                    tablet="/loopsides-tablet.webp"
+                    mobile="/loopsides-mobile.webp"
                 ></ProjectImage>
             ),
-            skills: ['HTML', 'CSS', 'TypeScript', 'React', 'Redux', 'Electron'],
-            linkToGithub: 'https://github.com/BillRozy/bench-battles',
+            skills: ['HTML', 'CSS', 'JavaScript', 'React', 'TailwindCSS'],
+            linkToGithub: 'https://github.com/BillRozy/FM-CSS-2',
         },
         {
-            title: 'MuSync',
+            title: 'Newspaper - Accessible Web Page',
             img: (
                 <ProjectImage
-                    small="thumbnail-project-2-small.webp"
-                    huge="thumbnail-project-2-large.webp"
-                    alt="project 2"
+                    desktop="/access-desktop.webp"
+                    tablet="/access-tablet.webp"
+                    mobile="/access-mobile.webp"
                 ></ProjectImage>
             ),
-            skills: ['HTML', 'CSS', 'TypeScript', 'Vue', 'Quasar', 'Pinia'],
-            linkToGithub: 'https://github.com/BillRozy/musink',
+            skills: ['HTML', 'CSS', 'JavaScript', 'React', 'TailwindCSS'],
+            linkToGithub: 'https://github.com/BillRozy/FM-Access-4',
         },
         {
-            title: 'Portfolio',
+            title: 'This Portfolio Itself!',
             img: (
                 <ProjectImage
-                    small="thumbnail-project-2-small.webp"
-                    huge="thumbnail-project-2-large.webp"
-                    alt="project 2"
+                    desktop="/portfolio-desktop.webp"
+                    tablet="/portfolio-tablet.webp"
+                    mobile="/portfolio-mobile.webp"
                 ></ProjectImage>
             ),
             skills: ['HTML', 'CSS', 'TypeScript', 'React', 'TailwindCSS', 'Next.js', 'React-Intl'],
-            linkToGithub: 'https://github.com/BillRozy/musink',
+            linkToGithub: 'https://github.com/BillRozy/web-portfolio',
         },
     ]
     const projectRenderFunctions = projects.map((project) => {
