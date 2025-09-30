@@ -30,7 +30,7 @@ export default function Project({ project }: { project: ProjectType }) {
         <div className="group relative flex flex-shrink-0 flex-col items-start gap-2">
             <div className="relative aspect-[4/3] w-full touch-none">
                 {project.img}
-                <BackgroundLayer className="z-0 hidden bg-overflow-bg/90 xl:invisible xl:block xl:hover:cursor-pointer xl:group-hover:visible"></BackgroundLayer>
+                <BackgroundLayer className="bg-overflow-bg/90 left-0 top-0 z-0 hidden xl:invisible xl:block xl:hover:cursor-pointer xl:group-hover:visible"></BackgroundLayer>
                 <PrimaryButton className="left-0 right-0 top-1/2 mx-auto hidden max-w-40 -translate-y-1/2 xl:invisible xl:absolute xl:block xl:group-hover:visible">
                     <GitHubLink linkToGithub={project.linkToGithub}></GitHubLink>
                 </PrimaryButton>
