@@ -3,74 +3,52 @@ import { useIntl } from 'react-intl'
 
 export default function SkillsSubPage() {
     const intl = useIntl()
-    const years5ExperienceMessage = intl.formatMessage(
-        {
-            id: 'app.yearsExperienceMessage',
-        },
-        {
-            num: 5,
-        }
-    )
-    const years3ExperienceMessage = intl.formatMessage(
-        {
-            id: 'app.yearsExperienceMessage',
-        },
-        {
-            num: 3,
-        }
-    )
-    const years2ExperienceMessage = intl.formatMessage(
-        {
-            id: 'app.yearsExperienceMessage',
-        },
-        {
-            num: 2,
-        }
-    )
-    const years1ExperienceMessage = intl.formatMessage(
-        {
-            id: 'app.yearsExperienceMessage',
-        },
-        {
-            num: 1,
-        }
-    )
+    const getYearsExperienceMessage = (startYear: number) => {
+        return intl.formatMessage(
+            {
+                id: 'app.yearsExperienceMessage',
+            },
+            {
+                num: new Date().getFullYear() - startYear,
+            }
+        )
+    }
     const skills = [
         {
             title: 'HTML',
-            description: years5ExperienceMessage,
+            description: getYearsExperienceMessage(2018),
         },
         {
             title: 'CSS',
-            description: years5ExperienceMessage,
+            description: getYearsExperienceMessage(2018),
         },
         {
             title: 'JavaScript',
-            description: years3ExperienceMessage,
+            description: getYearsExperienceMessage(2018),
         },
         {
             title: 'Vue',
-            description: years5ExperienceMessage,
+            description: getYearsExperienceMessage(2021),
         },
         {
             title: 'React',
-            description: years2ExperienceMessage,
+            description: getYearsExperienceMessage(2021),
         },
         {
             title: 'TailwindCSS',
-            description: years1ExperienceMessage,
+            description: getYearsExperienceMessage(2023),
         },
         {
             title: 'TypeScript',
-            description: years3ExperienceMessage,
+            description: getYearsExperienceMessage(2023),
         },
         {
             title: 'Python',
-            description: years5ExperienceMessage,
+            description: getYearsExperienceMessage(2019),
         },
         {
             title: 'Node.js',
-            description: years3ExperienceMessage,
+            description: getYearsExperienceMessage(2020),
         },
     ]
     return (
